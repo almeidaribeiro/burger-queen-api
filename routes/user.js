@@ -30,6 +30,7 @@ router.put("/user/:id", (req, res) => { User.update({...req.body}, {where: {id: 
     });
 });
 
+
 router.delete("/user/:id", (req, res) => {User.destroy({where: {id: req.params.id} })
     .then(() => res.sendStatus(200));
 });
